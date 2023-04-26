@@ -14,12 +14,12 @@ const Banner = () => {
         if (location.pathname === '/about') {
             setabout(true)
         };
-      
-    }, [location])
 
+    }, [location])
+    console.log(about)
     return (
         <section className={about ? 'banner_About' : 'banner_Homme'}>
-            {/* on affiche le titre si seulement si le state est true */}
+            {/* on affiche le titre si seulement si le state est false */}
             {!about && <h2 >Chez vous, partout et ailleurs</h2>}
         </section>
 
