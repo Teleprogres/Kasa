@@ -1,0 +1,78 @@
+@import "../main.scss";
+
+.banner {
+  &_Homme {
+    max-width: 1440px;
+    position: relative;
+    @include flex;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+      url("../../assets/home_cover.png");
+    background-position: center;
+    background-size: cover;
+
+    @include responsive(phone-very-small) {
+      height: 120px;
+      width: 90%;
+      margin: 1rem auto;
+      border-radius: 10px;
+    }
+    @include responsive(phone-small) {
+      height: 160px;
+      // padding: 2rem;
+    }
+    @include responsive(phone) {
+      height: 220px;
+      margin: 2rem auto;
+      border-radius: 20px;
+    }
+    @include responsive(portable) {
+      width: 100%;
+      margin: 4rem auto;
+      max-width: 1700px;
+    }
+
+    h2 {
+      color: $color-primary;
+      font-size: 2rem;
+      padding-left: 20px;
+      font-weight: 400;
+
+      @include responsive(phone-small) {
+        font-size: 3rem;
+      }
+      @include responsive(phone) {
+        padding-left: 0;
+      }
+      @include responsive(portable) {
+        font-size: 4.5rem;
+        font-weight: 500;
+      }
+    }
+  }
+
+  &_About {
+    margin: 0 auto;
+    border-radius: 25px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+      url("../../assets/about_cover.png");
+    background-position: center;
+    background-size: cover;
+    @include responsive(phone-very-small) {
+      max-width: 95%;
+      margin: 0.8rem auto;
+      height: 150px;
+    }
+    @include responsive(phone-small) {
+      margin: 2rem auto;
+      height: 180px;
+    }
+    @include responsive(phone) {
+      margin: 2.5rem auto;
+      height: 250px;
+    }
+
+    @include responsive(portable) {
+      max-width: 1700px;
+    }
+  }
+}

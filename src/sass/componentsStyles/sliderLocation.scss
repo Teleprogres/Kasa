@@ -1,0 +1,55 @@
+@import "../main.scss";
+
+.container_ {
+  position: relative;
+  display: flex;
+  background-position: center;
+  background-size: cover;
+  margin: 0 auto;
+
+  @include responsive(phone-very-small) {
+    height: 300px;
+    border-radius: 15px;
+    max-width: 95%;
+  }
+  @include responsive(phone) {
+    height: 40rem;
+    border-radius: 25px;
+    margin: 2rem auto;
+  }
+ @include responsive(portable) {
+    max-width: 1700px;
+  }
+
+  &_arrow {
+    position: absolute;
+    top: 50%;
+    height: 15%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    &:active {
+      transform: translateY(-50%) scale(0.9);
+    }
+    &_right {
+      right: 15px;
+      @include responsive(phone) {
+        right: 15px;
+      }
+    }
+    &_left {
+      left: 15px;
+      @include responsive(phone) {
+        right: 25px;
+      }
+    }
+  }
+  .numImage {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: $color-primary;
+    font-weight: 900;
+    font-size: clamp(20px, 2vw, 20px);
+  }
+}

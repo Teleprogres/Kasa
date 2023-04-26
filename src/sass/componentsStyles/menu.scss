@@ -1,0 +1,34 @@
+@import "../main.scss";
+.menu {
+  @include flex(row, flex-start, center);
+  // display: flex;
+  // justify-content: flex-start;
+  // align-items: center;
+  color: $color-secondary;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  @include responsive(phone-very-small) {
+    font-size: $font_size-very-small;
+    gap: 0.5rem;
+  }
+  @include responsive(phone-small) {
+    font-size: $font_size-small;
+    gap: 1rem;
+  }
+  @include responsive(phone) {
+    font-size: $font_size-medium;
+    gap: 4rem;
+  }
+  @include responsive(portable) {
+    font-size: 30px;
+  }
+  &_item {
+    list-style: none;
+  }
+}
+.activeLink {
+  color: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: underline;
+}

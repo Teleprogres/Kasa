@@ -1,0 +1,123 @@
+@import "../main.scss";
+
+// deuxième partie
+.container {
+  margin-bottom: 2rem;
+  color: $color-secondary;
+  @include responsive(phone-very-small) {
+    @include flex(column, flex-start, flex-start);
+    max-width: 95%;
+    margin: 0 auto;
+  }
+  @include responsive(phone) {
+    @include flex(row, space-between, flex-start);
+  }
+  @include responsive(portable) {
+    max-width: 1700px;
+  }
+
+  //
+  &_left {
+    margin-top: 20px;
+    h2 {
+      @include responsive(phone-very-small) {
+        font-size: $font_size-small-paragraph;
+        line-height: 1.7;
+      }
+      @include responsive(phone-small) {
+        font-size: $font_size-small;
+        padding-bottom: 1.5rem;
+      }
+      @include responsive(phone) {
+        font-size: $font_size-medium;
+      }
+    }
+
+    p {
+      padding-bottom: 1.5rem;
+      @include responsive(phone-very-small) {
+        font-size: $font_size-small-paragraph;
+      }
+      @include responsive(phone) {
+        font-size: $font_size-medium;
+      }
+    }
+    button {
+      display: inline;
+
+      margin: 0 8px 1.5rem 0;
+      cursor: pointer;
+      border-radius: 10px;
+      border: none;
+      color: $color-primary;
+      background-color: $color-secondary;
+      @include responsive(phone-very-small) {
+        font-size: $font_size-very-small;
+        padding: 6px 10px;
+      }
+
+      @include responsive(phone) {
+        font-size: $font_size-small-paragraph;
+        padding: 8px 15px;
+      }
+      &:hover {
+        box-shadow: 0 2px 8px rgb(0, 0, 0);
+      }
+    }
+  }
+
+  &_right {
+    @include flex(row-reverse, space-between, center);
+    flex-shrink: 1;
+    width: 100%;
+    margin: 1.5rem auto;
+    @include responsive(phone) {
+      @include flex(column, space-around, flex-end);
+      flex-shrink: 0;
+      width: 15%;
+      gap: 15px;
+      margin: 0;
+    }
+    @include responsive(portable) {
+      gap: 3rem;
+    }
+
+    &_host {
+      @include flex(row, flex-start, center);
+      gap: 0 20px;
+      @include responsive(phone) {
+        @include flex(row, center, center);
+        font-size: $font_size-medium;
+      }
+    }
+
+    &_name {
+      @include flex(column, flex-start, center);
+      font-size: 1.5rem;
+
+      @include responsive(phone) {
+        @include flex(column);
+      }
+    }
+
+    img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 50%;
+      @include responsive(phone) {
+        width: 80px;
+        height: 80px;
+      }
+    }
+    &_stars {
+      display: flex;
+      gap: 5px;
+      img {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
+  }
+}

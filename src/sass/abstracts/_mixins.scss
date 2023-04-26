@@ -1,0 +1,61 @@
+//
+@mixin displayFlex {
+  display: flex;
+  flex-wrap: wrap;
+}
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+//
+@mixin absCenter {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// media
+// 1em = 16px
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint==phone-very-small {
+    //320px
+    @media only screen and (min-width: 320px) {
+      @content;
+    }
+  }
+  //400px
+  @if $breakpoint==phone-small {
+    @media only screen and (min-width: 400px) {
+      @content;
+    }
+  }
+
+  //600px
+  @if $breakpoint == phone {
+    @media only screen and (min-width: 600px) {
+      @content;
+    }
+  }
+  @if $breakpoint == portable {
+    //900px
+    @media only screen and (min-width: 900px) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop {
+    //1440px
+    @media only screen and (max-width: 1440px) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@import "../main.scss";
+
+.page {
+  margin-bottom: 3rem;
+  color: $color-secondary;
+  &_notfound {
+    @include flex(column, center, center);
+    min-height: calc(100vh - 300px);
+    &_title {
+      font-weight: 700;
+      padding: 10px;
+      font-size: 10rem;
+      letter-spacing: 3px;
+      @include responsive(phone) {
+        font-weight: 700;
+        font-size: 20rem;
+        letter-spacing: 5;
+      }
+      @include responsive(portable) {
+        font-weight: 900;
+        font-size: 30rem;
+      }
+    }
+    &_paragraph {
+      font-weight: 400;
+      font-size: 2rem;
+      text-align: center;
+      @include responsive(phone) {
+        font-weight: 400;
+        font-size: 3rem;
+      }
+       @include responsive(phone) {
+        font-weight: 500;
+        font-size: 3.5rem;
+      }
+    }
+    &_redirect {
+      margin-top: 10rem;
+      display: block;
+      text-align: center;
+      font-weight: 600;
+      font-size: $font_size-small;
+      text-decoration: underline;
+    }
+  }
+}

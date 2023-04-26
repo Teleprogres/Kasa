@@ -1,0 +1,80 @@
+@import "../main.scss";
+
+.box {
+  position: relative;
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease-in-out;
+
+  @include responsive(phone-very-small) {
+    width: 100%;
+    height: 25rem;
+  }
+  @include responsive(phone-small) {
+    height: 30rem;
+  }
+  @include responsive(phone) {
+    height: 30rem;
+  }
+  @include responsive(portable) {
+    width: 45%;
+  }
+
+  @media screen and (min-width: 1100px) {
+    width: 30%;
+  }
+  @media screen and (min-width: 1700px) {
+    width: 360px;
+  }
+  &::after {
+    content: "";
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      190deg,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(0, 0, 0, 0.5) 100%
+    );
+  }
+
+  &:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+  &:hover img {
+    transform: scale(1.04);
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.2s ease-in-out;
+  }
+  // &_heading {
+  //   position: absolute;
+  //   height: 5rem;
+  //   width: 100%;
+  //   bottom: 0;
+  //   // text-align: center;
+  // }
+
+  h3 {
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    font-weight: 500;
+    font-size: $font_size-small-paragraph;
+    color: $color-tertiary;
+    z-index: 100;
+
+    @include responsive(phone) {
+      font-size: $font_size-small;
+      left: 20px;
+    }
+  }
+}

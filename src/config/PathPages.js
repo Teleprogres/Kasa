@@ -1,0 +1,6 @@
+export { default as Home } from '../pages/Home'
+export { default as About } from '../pages/About'
+export { default as Location } from '../pages/Location'
+export { default as PageNotFound } from '../pages/PageNotFound'
+export { default as Header } from '../components/Header'
+export { default as Footer } from '../components/Footer'

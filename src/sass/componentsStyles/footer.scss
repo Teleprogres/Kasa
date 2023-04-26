@@ -1,0 +1,32 @@
+@import "../main.scss";
+
+.footer {
+  @include flex(column);
+  gap: 3rem;
+  height: 15rem;
+  background-color: #000;
+  
+
+  &_kasa {
+    color: $color-primary;
+
+    @include responsive(phone-very-small) {
+      font-size: $font_size-small;
+    }
+    @include responsive(phone-small) {
+      font-size: $font_size-medium;
+    }
+    @include responsive(phone) {
+      font-size: $font_size-big;
+    }
+  }
+  img{
+     @include responsive(phone-very-small) {
+      height: 15%;
+    }
+     @include responsive(phone) {
+      height: 20%;
+    }
+
+  }
+}

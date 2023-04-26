@@ -1,0 +1,95 @@
+@import "../main.scss";
+
+.container_collapse {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  gap: 20px;
+  &:last-child {
+    margin-bottom: 8rem;
+  }
+  @include responsive(phone-very-small) {
+    max-width: 95%;
+  }
+  @include responsive(phone) {
+    flex-wrap: nowrap;
+  }
+  @include responsive(portable) {
+    max-width: 1700px;
+  }
+
+  &_description {
+    @include responsive(phone-very-small) {
+      width: 100%;
+      margin: 0 auto;
+    }
+    @include responsive(phone) {
+      width: 70%;
+    }
+  }
+  // &_equipement {
+  //   width: 45%;
+  // }
+  &_title {
+    @include flex(row, space-between, center);
+    background-color: $color-secondary;
+    color: $color-primary;
+    border-radius: 8px;
+    border: none;
+    font-weight: 400;
+    width: 100%;
+    padding: 7px 8px;
+    font-size: $font_size-very-small;
+    cursor: pointer;
+    @include responsive(phone) {
+      font-weight: 500;
+      font-size: 18px;
+      padding: 10px 15px;
+      border-radius: 10px;
+    }
+    @include responsive(portable) {
+      
+      font-size: 22px;
+    }
+    .arrow {
+      width: 8px;
+      transition: all 0.2s ease-in-out;
+      @include responsive(phone) {
+        width: 15px;
+      }
+    }
+
+    .arrow_up {
+      transform: rotate(0deg);
+    }
+    .arrow_down {
+      transform: rotate(180deg);
+    }
+  }
+
+  &_content {
+    background-color: $color-tertiary;
+    width: 100%;
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+    color: $color-secondary;
+    transition: visibility 0.5s ease-in-out, opacity 0.5s ease-in-out,
+      height 0.2s ease-in-out;
+    letter-spacing: 1px;
+    padding: 10px;
+    font-size: $font_size-small-paragraph;
+    @include responsive(portable) {
+      font-size: $font_size-medium;
+    }
+  }
+
+  &_hidden {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+  }
+
+  //
+}
