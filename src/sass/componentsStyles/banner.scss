@@ -2,7 +2,8 @@
 
 .banner {
   &_Homme {
-    max-width: 1440px;
+    width: 95%;
+    // max-width: 1440px;
     position: relative;
     @include flex;
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
@@ -12,7 +13,7 @@
 
     @include responsive(phone-very-small) {
       height: 120px;
-      width: 90%;
+
       margin: 1rem auto;
       border-radius: 10px;
     }
@@ -23,12 +24,11 @@
     @include responsive(phone) {
       height: 220px;
       margin: 2rem auto;
-      border-radius: 20px;
+      border-radius: 25px;
     }
     @include responsive(portable) {
-      width: 100%;
-      margin: 4rem auto;
       max-width: 1700px;
+      // padding: 0rem 2rem;
     }
 
     h2 {
@@ -36,21 +36,24 @@
       font-size: 2rem;
       padding-left: 20px;
       font-weight: 400;
-
       @include responsive(phone-small) {
-        font-size: 3rem;
+        padding-left: 0;
       }
+
       @include responsive(phone) {
         padding-left: 0;
+        font-size: 2.5rem;
       }
       @include responsive(portable) {
         font-size: 4.5rem;
         font-weight: 500;
+        font-size: 3.5rem;
       }
     }
   }
 
   &_About {
+    width: 95%;
     margin: 0 auto;
     border-radius: 25px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
@@ -58,7 +61,6 @@
     background-position: center;
     background-size: cover;
     @include responsive(phone-very-small) {
-      max-width: 95%;
       margin: 0.8rem auto;
       height: 150px;
     }
@@ -69,6 +71,7 @@
     @include responsive(phone) {
       margin: 2.5rem auto;
       height: 250px;
+      border-radius: 25px;
     }
 
     @include responsive(portable) {

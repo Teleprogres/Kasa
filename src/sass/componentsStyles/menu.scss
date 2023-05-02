@@ -1,9 +1,6 @@
 @import "../main.scss";
 .menu {
   @include flex(row, flex-start, center);
-  // display: flex;
-  // justify-content: flex-start;
-  // align-items: center;
   color: $color-secondary;
   position: relative;
   transition: all 0.2s ease-in-out;
@@ -16,19 +13,16 @@
     gap: 1rem;
   }
   @include responsive(phone) {
-    font-size: $font_size-medium;
-    gap: 4rem;
+    gap: 2.5rem;
   }
-  @include responsive(portable) {
-    font-size: 30px;
-  }
+
   &_item {
     list-style: none;
   }
 }
 .activeLink {
   color: inherit;
-  font-weight: 700;
+  font-weight: 600;
   cursor: pointer;
   text-decoration: underline;
 }

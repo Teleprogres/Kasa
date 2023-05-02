@@ -5,28 +5,26 @@
   gap: 3rem;
   height: 15rem;
   background-color: #000;
-  
 
   &_kasa {
     color: $color-primary;
 
     @include responsive(phone-very-small) {
-      font-size: $font_size-small;
+      font-size: $font_size-very-small;
     }
     @include responsive(phone-small) {
-      font-size: $font_size-medium;
+      font-size: $font_size-small-paragraph;
     }
     @include responsive(phone) {
-      font-size: $font_size-big;
+      font-size: $font_size-small;
     }
   }
-  img{
-     @include responsive(phone-very-small) {
+  img {
+    @include responsive(phone-very-small) {
       height: 15%;
     }
-     @include responsive(phone) {
+    @include responsive(phone) {
       height: 20%;
     }
-
   }
 }

@@ -6,12 +6,11 @@
   flex-wrap: wrap;
   margin-bottom: 2rem;
   gap: 20px;
+  width: 95%;
   &:last-child {
     margin-bottom: 8rem;
   }
-  @include responsive(phone-very-small) {
-    max-width: 95%;
-  }
+
   @include responsive(phone) {
     flex-wrap: nowrap;
   }
@@ -44,14 +43,11 @@
     cursor: pointer;
     @include responsive(phone) {
       font-weight: 500;
-      font-size: 18px;
-      padding: 10px 15px;
+      // font-size: 1.2rem;
+      padding: 10px 12px;
       border-radius: 10px;
     }
-    @include responsive(portable) {
-      
-      font-size: 22px;
-    }
+
     .arrow {
       width: 8px;
       transition: all 0.2s ease-in-out;
@@ -79,9 +75,9 @@
       height 0.2s ease-in-out;
     letter-spacing: 1px;
     padding: 10px;
-    font-size: $font_size-small-paragraph;
+    font-size: $font_size-very-small;
     @include responsive(portable) {
-      font-size: $font_size-medium;
+      font-size: 1.2rem;
     }
   }
 

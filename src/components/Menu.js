@@ -3,6 +3,8 @@ import '../sass/componentsStyles/menu.scss'
 import { NavLink } from 'react-router-dom'
 
 const Menu = () => {
+
+    
     return (
         <nav >
             <ul className="menu">
@@ -10,6 +12,7 @@ const Menu = () => {
                     <NavLink to="/home" className={({ isActive }) =>
                         (isActive ? "activeLink" : undefined)} aria-label="Accueil">Accueil
                     </NavLink>
+                   
                 </li>
                 <li className='menu_item'>
                     <NavLink to="/about" className={({ isActive }) =>

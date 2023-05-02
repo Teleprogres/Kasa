@@ -16,7 +16,7 @@ const Banner = () => {
         };
 
     }, [location])
-    console.log(about)
+
     return (
         <section className={about ? 'banner_About' : 'banner_Homme'}>
             {/* on affiche le titre si seulement si le state est false */}

@@ -7,31 +7,30 @@
     @include flex(column, center, center);
     min-height: calc(100vh - 300px);
     &_title {
-      font-weight: 700;
+      font-weight: 500;
       padding: 10px;
-      font-size: 10rem;
-      letter-spacing: 3px;
+      font-size: 8rem;
       @include responsive(phone) {
-        font-weight: 700;
-        font-size: 20rem;
-        letter-spacing: 5;
+        font-weight: 600;
+        font-size: 10rem;
       }
       @include responsive(portable) {
-        font-weight: 900;
-        font-size: 30rem;
+        font-size: 15rem;
       }
     }
     &_paragraph {
       font-weight: 400;
-      font-size: 2rem;
+      font-size: 1.5rem;
       text-align: center;
+      width: 90%;
       @include responsive(phone) {
         font-weight: 400;
-        font-size: 3rem;
+        font-size: 1.8rem;
       }
-       @include responsive(phone) {
+      @include responsive(portable) {
+        width: 100%;
         font-weight: 500;
-        font-size: 3.5rem;
+        font-size: 2.5rem;
       }
     }
     &_redirect {
@@ -39,8 +38,11 @@
       display: block;
       text-align: center;
       font-weight: 600;
-      font-size: $font_size-small;
+      font-size: $font_size-very-small;
       text-decoration: underline;
+      @include responsive(portable) {
+        font-size: $font_size-small;
+      }
     }
   }
 }
